@@ -3,12 +3,13 @@ import { EasybaseProvider, useEasybase } from 'easybase-react';
 import ebconfig from "./ebconfig"
 import {ImSpinner} from 'react-icons/im'
 import {FaTrash} from 'react-icons/fa'
+import TestingCSS from './TestingCSS'
 
 export default function App() {
   return (
     <>
     <EasybaseProvider ebconfig={ebconfig}>
-      <Example />
+      <TestingCSS />
     </EasybaseProvider>
     </>
   );
@@ -60,10 +61,10 @@ function Card({ name, email, phone, message, _key, removeItem }){
           <p className="email">{email}</p>
           <p className="phone">{phone}</p>
           <p className="message">{message}</p>
-          <div className="btn-container">
-            <button onClick={handleDelete} type="button" className="delete-btn"><FaTrash></FaTrash></button>
-          </div>
       </article>
+      <div className="btn-container">
+          <button onClick={handleDelete} type="button" className="delete-btn"><FaTrash></FaTrash></button>
+      </div>
     </div>
   )
 }

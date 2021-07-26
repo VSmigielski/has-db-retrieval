@@ -9,7 +9,7 @@ export default function App() {
   return (
     <>
     <EasybaseProvider ebconfig={ebconfig}>
-      <TestingCSS />
+      <Example />
     </EasybaseProvider>
     </>
   );
